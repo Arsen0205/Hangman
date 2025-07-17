@@ -43,12 +43,12 @@ public class Game {
             }
 
             if (isWordGuessed()){
-                System.out.println("Вы угадали слово: " + word);
+                System.out.println("Вы угадали слово: " + word.toLowerCase());
                 break;
             }
 
             if (errors >= MAX_ERRORS){
-                System.out.println("Вы не угадали слово: " + word);
+                System.out.println("Вы не угадали слово: " + word.toLowerCase());
                 break;
             }
         }
@@ -58,7 +58,7 @@ public class Game {
     }
 
     private boolean isWordGuessed(){
-        for(char c : word.toCharArray()){
+        for(char c : word.toLowerCase().toCharArray()){
             if (!guessedLetters.contains(c)){
                 return false;
             }
