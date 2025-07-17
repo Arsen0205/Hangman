@@ -18,7 +18,7 @@ public class Game {
         guessedLetters.clear();
         Scanner scanner = new Scanner(System.in);
 
-        word = wordRandom.random();
+        word = wordRandom.random().toLowerCase();
         System.out.println(getMaskedWord());
 
         while (true){
@@ -58,7 +58,7 @@ public class Game {
     }
 
     private boolean isWordGuessed(){
-        for(char c : word.toCharArray()){
+        for(char c : word.toLowerCase().toCharArray()){
             if (!guessedLetters.contains(c)){
                 return false;
             }
