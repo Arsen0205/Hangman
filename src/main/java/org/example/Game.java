@@ -7,7 +7,7 @@ import java.util.Set;
 public class Game {
     private static final int MAX_ERRORS = 6;
     private int errors;
-    private final WordRandom wordRandom = new WordRandom();
+    private final Dictionary wordRandom = new Dictionary();
     private Set<Character> guessedLetters = new HashSet<>();
     private String word;
 
