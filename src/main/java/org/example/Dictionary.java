@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class WordRandom {
+public class Dictionary {
     private final String[] words = {
             "аэропорт", "телевизор", "компьютер", "мышка"
     };
