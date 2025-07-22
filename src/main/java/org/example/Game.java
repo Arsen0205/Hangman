@@ -9,14 +9,14 @@ import java.util.stream.Collectors;
 public class Game {
     private static final int MAX_ERRORS = 6;
     private int errors;
-    private final WordRandom wordRandom;
+    private final Dictionary wordRandom;
     private final Set<Character> enteredLetters = new TreeSet<>();
     private final Set<Character> guessedLetters = new TreeSet<>();
     private final static char MASK_SYMBOL = '_';
     private String word;
 
     public Game(String dictionaryFilePath) throws IOException{
-        wordRandom = new WordRandom(dictionaryFilePath);
+        wordRandom = new Dictionary(dictionaryFilePath);
     }
 
 
