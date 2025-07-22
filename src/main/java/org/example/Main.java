@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.InputMismatchException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -28,8 +28,12 @@ public class Main {
 
             switch (choice){
                 case START -> {
-                    Game game = new Game();
-                    game.start();
+                    try {
+                        Game game = new Game("src/main/resources/words.txt");
+                        game.start();
+                    } catch (IOException e){
+                        System.err.println("Ошибка при загрузке словаря: " + e.getMessage());
+                    }
                 }
                 case QUIT -> {
                     System.out.println("Выход из игры");

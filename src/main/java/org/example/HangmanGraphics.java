@@ -1,8 +1,7 @@
 package org.example;
 
 public class HangmanGraphics {
-    public static void draw(int errors) {
-        String[] states = {
+   private static final String[] STATES = {
                 """
               +---+
                   |
@@ -47,6 +46,7 @@ public class HangmanGraphics {
                  ==="""
         };
 
-        System.out.println(states[errors]);
+    public static void draw(int errors){
+        System.out.println(STATES[errors]);
     }
 }
